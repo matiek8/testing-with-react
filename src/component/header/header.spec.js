@@ -3,24 +3,24 @@ import { shallow } from 'enzyme';
 import { findByTestAttr } from './../../../Utils';
 import Header from './index';
 
-const setUp= (props={})=> {
+const setUp = (props={})=> {
   const component = shallow(<Header {...props}/>)
   return component;
 };
 
 describe('Header Component', () => {
-  let component;
+  let wrapper;
   beforeEach(() => {
-      component = setUp();
+      wrapper = setUp();
   });
 
   it('Should render without errors', () => {
-    const wrapper = findByTestAttr(component, 'headerComponent');
-    expect(wrapper.length).toBe(1)
+    const component = findByTestAttr(wrapper, 'headerComponent');
+    expect(component.length).toBe(1)
   });
 
   it('Should render a logo', () => {
-    const wrapper = findByTestAttr(component, 'headerComponent');
-    expect(wrapper.length).toBe(1)
+    const component = findByTestAttr(wrapper, 'headerComponent');
+    expect(component.length).toBe(1)
   })
 });

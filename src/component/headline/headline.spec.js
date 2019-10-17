@@ -60,7 +60,7 @@ describe('Headline Component', () => {
     let wrapper;
     beforeEach(() => {
       wrapper=setUp();
-    })
+    });
 
     it('Should not render', () => {
       const component = findByTestAttr(wrapper,'headlineComponent');
